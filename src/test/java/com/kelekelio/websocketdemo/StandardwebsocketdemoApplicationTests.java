@@ -32,5 +32,6 @@ class WebsocketdemoApplicationTests {
 
             log.info("Session Id in test: {}, URI: {}", session.getId(), session.getUri());
             Assertions.assertNotNull(session.getUri());
+            Assertions.assertFalse(session.getAttributes().isEmpty());
         }
 }

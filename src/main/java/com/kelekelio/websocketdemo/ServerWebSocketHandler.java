@@ -23,7 +23,7 @@ public class ServerWebSocketHandler extends TextWebSocketHandler implements SubP
     @Override
     public void afterConnectionEstablished(WebSocketSession session) {
         log.info("======================");
-        log.info("Session established connection: {}, URI: {}, Thread id: {}", session.getId(), session.getUri(), Thread.currentThread().getId());
+        log.info("Session established connection: {}, URI: {}, Attributes: {}, Thread id: {}", session.getId(), session.getUri(), session.getAttributes().size(), Thread.currentThread().getId());
         log.info("======================");
         sessions.add(session);
     }
